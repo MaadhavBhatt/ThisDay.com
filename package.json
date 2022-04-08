@@ -1,0 +1,23 @@
+{
+  "name": "thisday.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaadhavBhatt/ThisDay.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaadhavBhatt/ThisDay.com/issues"
+  },
+  "homepage": "https://github.com/MaadhavBhatt/ThisDay.com#readme",
+  "dependencies": {
+    "sass": "^1.50.0"
+  }
+}
