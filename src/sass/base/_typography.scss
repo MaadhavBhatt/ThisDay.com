@@ -1,3 +1,5 @@
+@use 'sass:map' as map;
+
 $sans-serif: 'Inter', 'Source Sans Pro', 'Roboto', 'Lato', 'Poppins',
   'Work Sans', 'Open Sans', 'Calibri', sans-serif;
 $display: 'Audiowide', display;
@@ -14,16 +16,51 @@ $weights: (
 );
 
 $tracking-high: 2px;
-$leading-high: 1.6;
+$leading: (
+  'high': 1.6,
+  'low': 1.1,
+);
 
 $sizes: (
-  'title': clamp(100%, 2rem + 4vw, 6rem),
-  'subtitle': 0,
+  'title': clamp(3.5rem, 5vw, 6rem),
+  'subtitle': clamp(2rem, 3vw, 5rem),
+  'heading': 10px,
+  'text': clamp(1.5rem, 1vw, 3rem),
   'datetime': 0,
-  'headings': (
-    1: 0,
-    2: 0,
-    3: 0,
-    4: 0,
-  ),
 );
+
+body {
+  font-family: $sans-serif;
+}
+
+h1,
+.h1 {
+  font-size: map.get($sizes, 'subtitle');
+  font-weight: map.get($weights, 'bold');
+  line-height: map.get($leading, 'low');
+}
+
+h2,
+.h2 {
+  font-size: map.get($sizes, 'title');
+  font-weight: map.get($weights, 'bold');
+  line-height: map.get($leading, 'low');
+}
+
+h3,
+.h3 {
+  font-size: map.get($sizes, 'heading');
+}
+
+p,
+.p {
+  font-size: map.get($sizes, 'text');
+  font-weight: map.get($weights, 'regular');
+  line-height: map.get($leading, 'high');
+}
+
+time {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
