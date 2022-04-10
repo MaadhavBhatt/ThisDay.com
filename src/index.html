@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <header>
+    <header class="container">
       <nav class="nav">
         <img src="" alt="Website logo" class="logo" />
         <div class="hamburger">
           <span class="hamburger__bar"></span>
         </div>
-        <ul class="nav__list">
+        <ul class="nav__list" role="navigation">
           <li class="nav__item">Home</li>
           <li class="nav__item">Event list</li>
           <li class="nav__item">About</li>
@@ -22,17 +22,15 @@
       </nav>
     </header>
 
-    <section class="hero" aria-labelledby="hero__title">
-      <div class="container">
-        <h1 class="subtitle">
-          <time datetime="2022-04-08">April 4<sup>th</sup>, 2022</time>
-        </h1>
-        <h1 class="subtitle">
-          <time datetime="20:00">20:00</time>
-        </h1>
-        <h2 class="title" id="hero__title">What's on this day?</h2>
-        <a href="" class="scroll-btn"></a>
-      </div>
+    <section class="hero container" aria-labelledby="hero__title">
+      <h1 class="subtitle">
+        <time datetime="2022-04-08">April 4<sup>th</sup>, 2022</time>
+      </h1>
+      <h1 class="subtitle">
+        <time datetime="20:00">20:00</time>
+      </h1>
+      <h2 class="title" id="hero__title">What's on this day?</h2>
+      <a href="" class="scroll-btn"></a>
     </section>
 
     <section class="events" aria-labelledby="events__title">
