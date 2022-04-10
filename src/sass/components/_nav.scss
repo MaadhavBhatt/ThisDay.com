@@ -1,0 +1,45 @@
+@use 'sass:map';
+@use '../abstracts/' as abs;
+@use '../base/' as base;
+
+header {
+  background-color: steelblue;
+  color: aliceblue;
+  text-align: center;
+}
+
+nav,
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-height: 35vh;
+  padding-block: 2rem;
+
+  & img {
+    align-self: center;
+  }
+
+  & li {
+    width: fit-content;
+    margin-inline: auto;
+    padding: 0.5em;
+
+    font-size: 1.5rem;
+    list-style: none;
+    line-height: map.get(base.$leading, 'high');
+
+    cursor: pointer;
+  }
+
+  & li:hover,
+  & li:focus {
+    opacity: 0.75;
+  }
+
+  & .menu {
+    display: flex;
+    justify-content: space-between;
+  }
+}
