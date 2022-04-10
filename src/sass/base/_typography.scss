@@ -18,12 +18,12 @@ $leading-high: 1.6;
 
 $sizes: (
   'title': clamp(100%, 2rem + 4vw, 6rem),
-  'subtitle': clamp(),
-  'datetime': clamp(),
+  'subtitle': 0,
+  'datetime': 0,
   'headings': (
-    1: clamp(),
-    2: clamp(),
-    3: clamp(),
-    4: clamp(),
+    1: 0,
+    2: 0,
+    3: 0,
+    4: 0,
   ),
 );
