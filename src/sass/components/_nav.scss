@@ -17,6 +17,8 @@ nav,
   min-height: 35vh;
   padding-block: 2rem;
 
+  transition: transform 500ms ease-in-out;
+
   & img {
     align-self: center;
   }
