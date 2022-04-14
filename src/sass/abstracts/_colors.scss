@@ -1,3 +1,5 @@
+@use '_mixins' as mix;
+
 $light-theme: (
   neutral: (
     100: hsl(0 0% 95%),
@@ -22,6 +24,6 @@ $dark-theme: (
 
 $active-theme: $light-theme;
 
-@media screen and (prefers-color-scheme: dark) {
+@include mix.theme-mq() {
   $active-theme: $dark-theme;
 }
