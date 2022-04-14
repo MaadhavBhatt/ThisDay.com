@@ -9,4 +9,13 @@ $light-theme: (
   ),
 );
 
-// TODO: #6 Create dark theme
+$dark-theme: (
+  neutral: (
+    100: hsl(209 39% 25%),
+    900: hsl(0 0% 95%),
+  ),
+  accent: (
+    400: hsl(209 75% 48%),
+    500: hsl(209 75% 36%),
+  ),
+);
