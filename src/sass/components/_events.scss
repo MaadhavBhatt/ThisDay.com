@@ -1,0 +1,17 @@
+@use 'sass:map';
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/colors' as clrs;
+
+.events {
+  .event {
+    & .event__link {
+      text-decoration: none;
+
+      @include mix.button(
+        $bg: map.get(map.get(clrs.$active-theme, accent), 400),
+        $color: map.get(map.get(clrs.$active-theme, neutral), 900),
+        $border-color: map.get(map.get(clrs.$active-theme, accent), 400)
+      );
+    }
+  }
+}
