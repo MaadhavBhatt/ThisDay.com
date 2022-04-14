@@ -1,7 +1,7 @@
 @use 'sass:map' as map;
 
-$sans-serif: 'Inter', 'Source Sans Pro', 'Roboto', 'Lato', 'Poppins',
-  'Work Sans', 'Open Sans', 'Calibri', sans-serif;
+$sans-serif: 'Inter', 'Source Sans Pro', 'Roboto', 'Lato', 'Poppins', 'Work Sans', 'Open Sans',
+  'Calibri', sans-serif;
 $display: 'Audiowide', display;
 $code: 'Space Mono', 'Source Code Pro', 'Consolas', monospace;
 // Epilogue
@@ -24,7 +24,7 @@ $leading: (
 $sizes: (
   'title': clamp(3.5rem, 5vw, 6rem),
   'subtitle': clamp(2rem, 3vw, 5rem),
-  'heading': 10px,
+  'heading': clamp(1.5rem, 2vw, 3rem),
   'text': clamp(1.5rem, 1vw, 3rem),
   'datetime': 0,
 );
