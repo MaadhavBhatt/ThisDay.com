@@ -1,0 +1,11 @@
+@use 'sass:map';
+@use '../abstracts/colors' as clrs;
+
+header {
+  position: sticky;
+  top: 0;
+
+  background-color: map.get(map.get(clrs.$active-theme, accent), 400);
+  color: map.get(map.get(clrs.$active-theme, neutral), 900);
+  text-align: center;
+}
