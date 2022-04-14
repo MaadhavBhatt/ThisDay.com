@@ -1,6 +1,10 @@
 @use 'sass:map';
 @use 'sass:string';
+@use 'sass:color';
 @use '_breakpoints';
+
+$_btn-dark: hsl(0 0% 25%);
+$_btn-light: hsl(0 0% 90%);
 
 @mixin mq($key) {
   $size: map.get($breakpoints, $key);
@@ -24,5 +28,100 @@
     position: $pos;
     inset: $inset;
     @content;
+  }
+}
+
+@mixin button(
+  $bg: $_btn-light,
+  $color: $_btn-dark,
+  $border-thickness: 2px,
+  $border-color: color.adjust($_btn-dark, $lightness: -5%),
+  $border-style: solid,
+  $border-rad: 0,
+  $padding: 0.5em 1em,
+
+  $hover--bg: color.adjust($_btn-light, $lightness: +5%),
+  $hover--color: color.adjust($_btn-dark, $lightness: -5%),
+  $hover--border-thickness: $border-thickness,
+  $hover--border-color: color.adjust($_btn-dark, $lightness: -10%),
+  $hover--border-style: $border-style,
+  $hover--border-rad: $border-rad,
+  $hover--padding: $padding,
+
+  $focus--bg: $hover--bg,
+  $focus--color: $hover--color,
+  $focus--border-thickness: $hover--border-thickness,
+  $focus--border-color: $hover--border-color,
+  $focus--border-style: $hover--border-style,
+  $focus--border-rad: $hover--border-rad,
+  $focus--padding: $hover--padding,
+
+  $active--bg: $hover--bg,
+  $active--color: $hover--color,
+  $active--border-thickness: $hover--border-thickness,
+  $active--border-color: $hover--border-color,
+  $active--border-style: $hover--border-style,
+  $active--border-rad: $hover--border-rad,
+  $active--padding: $hover--padding,
+
+  $disabled--bg: $bg,
+  $disabled--color: $color,
+  $disabled--border-thickness: $border-thickness,
+  $disabled--border-color: $border-color,
+  $disabled--border-style: $border-style,
+  $disabled--border-rad: $border-rad,
+  $disabled--padding: $padding,
+
+  $transition: true,
+  $transition-duration: 0.2s,
+  $transition-timing-function: ease-in-out,
+  $transition-delay: 0s
+) {
+  display: inline-block;
+
+  transition: background-color $transition-duration $transition-timing-function $transition-delay,
+    color $transition-duration $transition-timing-function $transition-delay,
+    border-color $transition-duration $transition-timing-function $transition-delay,
+    border-width $transition-duration $transition-timing-function $transition-delay,
+    border-style $transition-duration $transition-timing-function $transition-delay,
+    border-radius $transition-duration $transition-timing-function $transition-delay,
+    padding $transition-duration $transition-timing-function $transition-delay;
+
+  background: $bg;
+  color: $color;
+  border: $border-thickness $border-style $border-color;
+  border-radius: $border-rad;
+  padding: $padding;
+
+  &:hover {
+    background: $hover--bg;
+    color: $hover--color;
+    border: $hover--border-thickness $hover--border-style $hover--border-color;
+    border-radius: $hover--border-rad;
+    padding: $hover--padding;
+  }
+
+  &:focus {
+    background: $focus--bg;
+    color: $focus--color;
+    border: $focus--border-thickness $focus--border-style $focus--border-color;
+    border-radius: $focus--border-rad;
+    padding: $focus--padding;
+  }
+
+  &:active {
+    background: $active--bg;
+    color: $active--color;
+    border: $active--border-thickness $active--border-style $active--border-color;
+    border-radius: $active--border-rad;
+    padding: $active--padding;
+  }
+
+  &:disabled {
+    background: $disabled--bg;
+    color: $disabled--color;
+    border: $disabled--border-thickness $disabled--border-style $disabled--border-color;
+    border-radius: $disabled--border-rad;
+    padding: $disabled--padding;
   }
 }
