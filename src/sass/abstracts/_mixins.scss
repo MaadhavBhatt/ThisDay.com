@@ -1,0 +1,28 @@
+@use 'sass:map';
+@use 'sass:string';
+@use '_breakpoints';
+
+@mixin mq($key) {
+  $size: map.get($breakpoints, $key);
+
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin theme-mq($preference: dark) {
+  @media screen and (prefers-color-scheme: $preference) {
+    @content;
+  }
+}
+
+@mixin pseudo($loc: before, $content: '', $pos: absolute, $inset: 0 0 0 0) {
+  position: relative;
+
+  *::#{$loc} {
+    content: $content;
+    position: $pos;
+    inset: $inset;
+    @content;
+  }
+}
