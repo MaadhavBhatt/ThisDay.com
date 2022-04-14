@@ -1,4 +1,9 @@
+@use 'sass:map';
+@use '../abstracts/colors' as clrs;
+
 .hamburger-container {
+  $_color: map.get(map.get(clrs.$active-theme, neutral), 900);
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +13,7 @@
   height: 50px;
 
   cursor: pointer;
-  border: 2px solid white;
+  border: 2px solid $_color;
 
   & .hamburger::after,
   & .hamburger::before {
@@ -21,7 +26,7 @@
   & .hamburger::after {
     width: 25px;
     height: 3px;
-    background: white;
+    background: $_color;
     border-radius: 5px;
   }
 
