@@ -19,3 +19,9 @@ $dark-theme: (
     500: hsl(209 75% 36%),
   ),
 );
+
+$active-theme: $light-theme;
+
+@media screen and (prefers-color-scheme: dark) {
+  $active-theme: $dark-theme;
+}
