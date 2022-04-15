@@ -24,10 +24,9 @@ $leading: (
 
 $sizes: (
   title: clamp(3.5rem, 5vw, 6rem),
-  subtitle: clamp(2rem, 3vw, 5rem),
-  heading: clamp(1.5rem, 2vw, 3rem),
+  subtitle: clamp(2.25rem, 3vw, 5rem),
+  heading: clamp(2rem, 2vw, 3rem),
   text: clamp(1.5rem, 1vw, 3rem),
-  datetime: 0,
 );
 
 body {
@@ -77,6 +76,7 @@ h4,
 
 p,
 .p {
+  --flow-spacer: 0.2em;
   font-size: map.get($sizes, text);
   font-weight: map.get($weights, regular);
   line-height: map.get($leading, high);
