@@ -1,4 +1,5 @@
 @use 'sass:map' as map;
+@use '../abstracts/colors' as clrs;
 
 $sans-serif: 'Inter', 'Source Sans Pro', 'Roboto', 'Lato', 'Poppins', 'Work Sans', 'Open Sans',
   'Calibri', sans-serif;
@@ -62,4 +63,6 @@ p,
 time {
   display: inline-block;
   width: 100%;
+
+  color: map.get(map.get(clrs.$active-theme, accent), 500);
 }
