@@ -1,4 +1,5 @@
 @use 'sass:map';
+@use '../abstracts' as abs;
 @use '../base/' as base;
 
 nav,
@@ -30,4 +31,35 @@ nav,
     display: flex;
     justify-content: space-between;
   }
+}
+
+@include abs.keyframes(fade-in) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include abs.keyframes(fade-out) {
+  100% {
+    opacity: 0;
+  }
+  0% {
+    opacity: 1;
+  }
+}
+
+@include abs.keyframes(slide-up) {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+nav[open] {
+  @include abs.animate(fade-in, 500ms, forwards);
 }
