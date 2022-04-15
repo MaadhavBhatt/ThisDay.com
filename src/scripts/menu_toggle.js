@@ -1,6 +1,6 @@
-const menu = document.querySelector('#menu');
+const nav = document.querySelector('#nav');
 const menuBtn = document.querySelector('#menuToggle');
 
 menuBtn.addEventListener('click', () => {
-  menu.classList.toggle('display-none');
+  nav.classList.toggle('display-none');
 });
