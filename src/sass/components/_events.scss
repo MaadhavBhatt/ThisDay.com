@@ -3,9 +3,12 @@
 @use '../abstracts/colors' as clrs;
 
 .events {
-  .event {
+  & .event {
+    margin-bottom: 4rem;
+
     & .event__link {
       text-decoration: none;
+      font-size: 1.25rem;
 
       @include mix.button(
         $bg: map.get(map.get(clrs.$active-theme, accent), 400),
