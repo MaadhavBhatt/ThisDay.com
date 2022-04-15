@@ -8,26 +8,26 @@ $code: 'Space Mono', 'Source Code Pro', 'Consolas', monospace;
 // Epilogue
 
 $weights: (
-  'light': 300,
-  'regular': 400,
-  'medium': 500,
-  'semibold': 600,
-  'bold': 700,
-  'black': 900,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  black: 900,
 );
 
 $tracking-high: 2px;
 $leading: (
-  'high': 1.6,
-  'low': 1.1,
+  high: 1.6,
+  low: 1.1,
 );
 
 $sizes: (
-  'title': clamp(3.5rem, 5vw, 6rem),
-  'subtitle': clamp(2rem, 3vw, 5rem),
-  'heading': clamp(1.5rem, 2vw, 3rem),
-  'text': clamp(1.5rem, 1vw, 3rem),
-  'datetime': 0,
+  title: clamp(3.5rem, 5vw, 6rem),
+  subtitle: clamp(2rem, 3vw, 5rem),
+  heading: clamp(1.5rem, 2vw, 3rem),
+  text: clamp(1.5rem, 1vw, 3rem),
+  datetime: 0,
 );
 
 body {
@@ -35,29 +35,51 @@ body {
 }
 
 h1,
+h2,
+h3,
+h4,
+.h1,
+.h2,
+.h3,
+.h4 {
+  line-height: map.get($leading, low);
+}
+
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3 {
+  font-weight: map.get($weights, bold);
+}
+
+h1,
 .h1 {
-  font-size: map.get($sizes, 'subtitle');
-  font-weight: map.get($weights, 'bold');
-  line-height: map.get($leading, 'low');
+  font-size: map.get($sizes, subtitle);
 }
 
 h2,
 .h2 {
-  font-size: map.get($sizes, 'title');
-  font-weight: map.get($weights, 'bold');
-  line-height: map.get($leading, 'low');
+  font-size: map.get($sizes, title);
 }
 
 h3,
 .h3 {
-  font-size: map.get($sizes, 'heading');
+  font-size: map.get($sizes, heading);
+}
+
+h4,
+.h4 {
+  font-size: map.get($sizes, text);
+  font-weight: map.get($weights, semibold);
 }
 
 p,
 .p {
-  font-size: map.get($sizes, 'text');
-  font-weight: map.get($weights, 'regular');
-  line-height: map.get($leading, 'high');
+  font-size: map.get($sizes, text);
+  font-weight: map.get($weights, regular);
+  line-height: map.get($leading, high);
 }
 
 time {
