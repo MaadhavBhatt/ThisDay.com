@@ -31,6 +31,16 @@ $_btn-light: hsl(0 0% 90%);
   }
 }
 
+@mixin animate($animation, $duration, $method, $times) {
+  animation: $animation $duration $method $times;
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
 @mixin button(
   $bg: $_btn-light,
   $color: $_btn-dark,
