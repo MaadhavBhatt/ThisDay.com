@@ -31,8 +31,8 @@ $_btn-light: hsl(0 0% 90%);
   }
 }
 
-@mixin animate($animation, $duration, $method, $times) {
-  animation: $animation $duration $method $times;
+@mixin animate($animation, $duration, $fill-mode) {
+  animation: $animation $duration $fill-mode;
 }
 
 @mixin keyframes($name) {
