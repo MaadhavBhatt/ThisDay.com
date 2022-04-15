@@ -87,6 +87,8 @@ $_btn-light: hsl(0 0% 90%);
   $transition-timing-function: ease-in-out,
   $transition-delay: 0s
 ) {
+  --flow-spacer: 0.8em;
+
   display: inline-block;
 
   @if $transition {

@@ -6,3 +6,7 @@ html {
   width: min(80%, 600px);
   margin-inline: auto;
 }
+
+img {
+  --flow-spacer: 0.75rem;
+}
