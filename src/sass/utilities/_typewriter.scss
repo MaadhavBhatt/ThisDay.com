@@ -21,7 +21,6 @@
 }
 
 .typewriter::before {
-  // background: map.get(map.get(abs.$active-theme, neutral), 100);
   background: white;
   animation: typewriter var(--typewriter-speed) steps(var(--typewriter-chars))
     var(--typewriter-delay) forwards;
