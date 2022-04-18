@@ -1,0 +1,27 @@
+$sans-serif: 'Inter', 'Source Sans Pro', 'Roboto', 'Lato', 'Poppins', 'Work Sans', 'Open Sans',
+  'Calibri', sans-serif;
+$display: 'Audiowide', display;
+$code: 'Space Mono', 'Source Code Pro', 'Consolas', monospace;
+// Epilogue
+
+$weights: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  black: 900,
+);
+
+$tracking-high: 2px;
+$leading: (
+  high: 1.6,
+  low: 1.1,
+);
+
+$sizes: (
+  title: clamp(3.5rem, 5vw, 6rem),
+  subtitle: clamp(2.25rem, 3vw, 5rem),
+  heading: clamp(2rem, 2vw, 3rem),
+  text: clamp(1.5rem, 1vw, 3rem),
+);
