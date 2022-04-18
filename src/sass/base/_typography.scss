@@ -60,4 +60,5 @@ time {
   width: 100%;
 
   color: map.get(map.get(clrs.$active-theme, accent), 500);
+  font-family: $monospace;
 }
