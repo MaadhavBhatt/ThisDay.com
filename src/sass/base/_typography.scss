@@ -1,5 +1,5 @@
 @use 'sass:map' as map;
-@use '../abstracts/colors' as clrs;
+@use '../abstracts/colors' as *;
 @use '../abstracts/type' as *;
 
 body {
@@ -59,6 +59,6 @@ time {
   display: inline-block;
   width: 100%;
 
-  color: map.get(map.get(clrs.$active-theme, accent), 500);
+  color: map.get(map.get($active-theme, accent), 500);
   font-family: $monospace;
 }
