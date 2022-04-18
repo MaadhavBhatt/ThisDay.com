@@ -1,0 +1,61 @@
+@use 'sass:map';
+@use '../abstracts/' as abs;
+
+.typewriter-container {
+  --typewriter-speed: 4s;
+  --typewriter-chars: 0;
+  --typewriter-delay: 1s;
+  --typewriter-blink: 750ms;
+}
+
+.typewriter {
+  font-family: abs.$monospace;
+  position: relative;
+}
+
+.typewriter::before,
+.typewriter::after {
+  content: '';
+  position: absolute;
+  inset: 0 0 0 0;
+}
+
+.typewriter::before {
+  // background: map.get(map.get(abs.$active-theme, neutral), 100);
+  background: white;
+  animation: typewriter var(--typewriter-speed) steps(var(--typewriter-chars))
+    var(--typewriter-delay) forwards;
+}
+
+.typewriter::after {
+  width: 0.125em;
+  background: map.get(map.get(abs.$active-theme, accent), 600);
+  animation: typewriter var(--typewriter-speed) steps(var(--typewriter-chars))
+      var(--typewriter-delay) forwards,
+    blink var(--typewriter-blink) steps(var(--typewriter-chars)) infinite;
+}
+
+.typewriter-fade {
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fade-in-up 2s ease calc(var(--typewriter-speed) + var(--typewriter-delay)) forwards;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes fade-in-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

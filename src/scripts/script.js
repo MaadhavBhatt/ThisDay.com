@@ -8,5 +8,8 @@ menuBtn.addEventListener('click', () => {
 });
 
 // Typewriter
-const typewriter = document.querySelector('.typewriter');
-typewriter.style.setProperty('--typewriter-chars', typewriter.textContent.length);
+const typewriterContainerList = document.querySelectorAll('.typewriter-container');
+typewriterContainerList.forEach((container) => {
+  const typewriter = container.querySelector('.typewriter');
+  container.style.setProperty('--typewriter-chars', typewriter.textContent.length);
+});
