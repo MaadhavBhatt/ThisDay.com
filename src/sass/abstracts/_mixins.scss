@@ -1,7 +1,7 @@
 @use 'sass:map';
 @use 'sass:string';
 @use 'sass:color';
-@use '_breakpoints';
+@use '_breakpoints' as *;
 
 $_btn-dark: hsl(0 0% 25%);
 $_btn-light: hsl(0 0% 90%);
