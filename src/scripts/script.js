@@ -4,7 +4,6 @@ const menuBtn = document.querySelector('#menuToggle');
 
 menuBtn.addEventListener('click', () => {
   nav.classList.toggle('open');
-  nav.classList.toggle('display-none');
 });
 
 // Typewriter
