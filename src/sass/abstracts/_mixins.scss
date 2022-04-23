@@ -20,10 +20,12 @@ $_btn-light: hsl(0 0% 90%);
   }
 }
 
-@mixin pseudo($loc: before, $content: '', $pos: absolute, $inset: 0 0 0 0) {
-  position: relative;
+@mixin pseudo($loc: before, $content: '', $pos: absolute, $inset: 0 0 0 0, $relative: true) {
+  @if $relative {
+    position: relative;
+  }
 
-  *::#{$loc} {
+  &::#{$loc} {
     content: $content;
     position: $pos;
     inset: $inset;
