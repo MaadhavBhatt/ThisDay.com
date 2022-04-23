@@ -16,27 +16,22 @@
   cursor: pointer;
   border: 2px solid $_color;
 
-  & .hamburger::after,
-  & .hamburger::before {
-    content: '';
-    position: absolute;
-  }
+  & .hamburger {
+    @include mix.pseudo($loc: before, $inset: auto auto auto auto, $relative: false) {
+      transform: translateY(-12px) translateX(-12.5px);
+    }
+    @include mix.pseudo($loc: after, $inset: auto auto auto auto, $relative: false) {
+      transform: translateY(12px) translateX(-12.5px);
+    }
 
-  & .hamburger,
-  & .hamburger::before,
-  & .hamburger::after {
-    width: 25px;
-    height: 3px;
-    background: $_color;
-    border-radius: 5px;
-  }
-
-  & .hamburger::after {
-    transform: translateY(12px) translateX(-12.5px);
-  }
-
-  & .hamburger::before {
-    transform: translateY(-12px) translateX(-12.5px);
+    &,
+    &::before,
+    &::after {
+      width: 25px;
+      height: 3px;
+      background: $_color;
+      border-radius: 5px;
+    }
   }
 }
 
