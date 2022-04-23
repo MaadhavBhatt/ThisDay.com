@@ -1,0 +1,8 @@
+@use '../abstracts/mixins' as mix;
+
+@include mix.mq(small) {
+  .flex-r {
+    display: flex;
+    gap: 1rem;
+  }
+}
