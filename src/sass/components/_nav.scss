@@ -46,3 +46,10 @@ nav,
     opacity: 1;
   }
 }
+
+@include abs.mq(small) {
+  nav,
+  .nav {
+    display: block;
+  }
+}
