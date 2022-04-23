@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use '../abstracts/colors' as clrs;
+@use '../abstracts/mixins' as mix;
 
 .hamburger-container {
   $_color: map.get(map.get(clrs.$active-theme, neutral), 900);
@@ -36,5 +37,11 @@
 
   & .hamburger::before {
     transform: translateY(-12px) translateX(-12.5px);
+  }
+}
+
+@include mix.mq(small) {
+  .hamburger-container {
+    display: none;
   }
 }
