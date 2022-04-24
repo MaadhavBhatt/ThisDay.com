@@ -6,6 +6,7 @@ nav,
 .nav {
   display: none;
   padding-block: 2rem;
+  background-color: map.get(map.get(abs.$active-theme, accent), 400);
 
   &[open] {
     display: block;
