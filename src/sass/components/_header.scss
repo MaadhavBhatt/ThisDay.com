@@ -2,6 +2,9 @@
 @use '../abstracts/colors' as clrs;
 
 header {
+  display: flex;
+  padding-block: 2rem;
+
   position: sticky;
   top: 0;
 
