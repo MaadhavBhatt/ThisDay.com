@@ -59,6 +59,6 @@ time {
   display: inline-block;
   width: 100%;
 
-  color: map.get(map.get($active-theme, accent), 500);
+  color: map.get(map.get($active-theme, accent), 600);
   font-family: $monospace;
 }

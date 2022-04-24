@@ -1,5 +1,13 @@
+@use 'sass:map';
+@use '../abstracts/' as abs;
+
 html {
   font-size: 10px;
+}
+
+body {
+  background-color: map.get(map.get(abs.$active-theme, neutral), 100);
+  color: map.get(map.get(abs.$active-theme, neutral), 900);
 }
 
 .container {
