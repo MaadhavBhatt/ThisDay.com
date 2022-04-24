@@ -1,0 +1,26 @@
+@use 'sass:map';
+@use '../abstracts/' as abs;
+
+footer {
+  color: var(--clr-neutral-900);
+  background-color: var(--clr-accent-400);
+
+  & .flex-r > * {
+    flex-grow: 1;
+  }
+
+  & li {
+    padding: 0.5em;
+
+    font-size: 1.2rem;
+    text-align: end;
+    line-height: map.get(abs.$leading, 'low');
+
+    cursor: pointer;
+  }
+
+  & li:hover,
+  & li:focus {
+    opacity: 0.75;
+  }
+}
