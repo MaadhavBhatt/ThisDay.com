@@ -1,0 +1,9 @@
+@use '../abstracts/colors' as clrs;
+
+:root {
+  @each $color, $shade in clrs.$active-theme {
+    @each $prop, $value in $shade {
+      --clr-#{$color}-#{$prop}: #{$value};
+    }
+  }
+}
