@@ -32,11 +32,6 @@ nav,
   & li:focus {
     opacity: 0.75;
   }
-
-  & .menu {
-    display: flex;
-    justify-content: space-between;
-  }
 }
 
 @include abs.keyframes(fade-in) {
