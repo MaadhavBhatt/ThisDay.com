@@ -2,16 +2,7 @@
 
 header {
   padding-block: 2rem;
-
-  position: sticky;
-  top: 0;
-
-  background-color: var(--clr-accent-400);
-  color: var(--clr-neutral-900);
   text-align: center;
-
-  & > * > .flex-r[data-flex='important'] {
-    justify-content: space-between;
-    align-items: center;
-  }
+  color: var(--clr-neutral-900);
+  background-color: var(--clr-accent-400);
 }
