@@ -1,9 +1,8 @@
-@use 'sass:map';
 @use '../abstracts/colors' as clrs;
 @use '../abstracts/mixins' as mix;
 
 .hamburger-container {
-  $_color: map.get(map.get(clrs.$active-theme, neutral), 900);
+  $_color: var(--clr-neutral-900);
 
   display: grid;
   place-items: center;

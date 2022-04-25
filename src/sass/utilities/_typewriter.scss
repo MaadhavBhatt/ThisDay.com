@@ -1,4 +1,3 @@
-@use 'sass:map';
 @use '../abstracts/' as abs;
 
 .typewriter-container {
@@ -21,14 +20,14 @@
 }
 
 .typewriter::before {
-  background: white;
+  background: var(--clr-neutral-100);
   animation: typewriter var(--typewriter-speed) steps(var(--typewriter-chars))
     var(--typewriter-delay) forwards;
 }
 
 .typewriter::after {
   width: 0.125em;
-  background: map.get(map.get(abs.$active-theme, accent), 600);
+  background: var(--clr-accent-600);
   animation: typewriter var(--typewriter-speed) steps(var(--typewriter-chars))
       var(--typewriter-delay) forwards,
     blink var(--typewriter-blink) steps(var(--typewriter-chars)) infinite;

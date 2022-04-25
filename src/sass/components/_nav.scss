@@ -6,8 +6,8 @@ nav,
 .nav {
   display: none;
   padding-block: 2rem;
-  color: map.get(map.get(abs.$active-theme, neutral), 900);
-  background-color: map.get(map.get(abs.$active-theme, accent), 400);
+  color: var(--clr-neutral-900);
+  background-color: var(--clr-accent-400);
 
   &[open] {
     display: block;

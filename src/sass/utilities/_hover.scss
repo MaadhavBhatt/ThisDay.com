@@ -1,4 +1,3 @@
-@use 'sass:map';
 @use '../abstracts/mixins' as mix;
 @use '../abstracts/colors' as clrs;
 
@@ -8,7 +7,7 @@
       width: 1ch;
       height: 4px;
 
-      background-color: map.get(map.get(clrs.$active-theme, accent), 500);
+      background-color: var(--clr-accent-500);
       transition: width 250ms ease-in-out;
     }
 
