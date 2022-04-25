@@ -1,7 +1,6 @@
 @use '../abstracts/colors' as clrs;
 
 header {
-  display: flex;
   padding-block: 2rem;
 
   position: sticky;
@@ -10,4 +9,9 @@ header {
   background-color: var(--clr-accent-400);
   color: var(--clr-neutral-900);
   text-align: center;
+
+  & > * > .flex-r[data-flex='important'] {
+    justify-content: space-between;
+    align-items: center;
+  }
 }
