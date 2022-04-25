@@ -1,6 +1,6 @@
 // Menu toggle
 const nav = document.querySelector('#nav');
-const hamburgerContainer = document.querySelector('.hamburger-container');
+const hamburgerContainer = document.querySelector('.hamburger');
 const menuBtn = document.querySelector('#menuToggle');
 
 menuBtn.addEventListener('click', () => {
