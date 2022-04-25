@@ -9,77 +9,70 @@
   </head>
   <body>
     <header>
-      <div class="container">
-        <div class="flex-r" data-flex="important">
-          <div class="logo-container">
-            <img
-              src="assets/images/brand/calendar - transparent.png"
-              alt="Website logo"
-              width="75"
-            />
+      <div class="container flex-c">
+        <div class="hamburger-container">
+          <div class="hamburger" id="menuToggle">
+            <span class="bar"></span>
           </div>
-          <div class="hamburger-container" id="menuToggle">
-            <span class="hamburger"></span>
+        </div>
+
+        <nav class="nav" id="nav">
+          <div class="container">
+            <ul class="nav__list flex-r" role="list">
+              <li class="nav__item hover-underline">Home</li>
+              <li class="nav__item hover-underline">Event list</li>
+              <li class="nav__item hover-underline">About</li>
+              <li class="nav__item hover-underline">Announcements</li>
+            </ul>
           </div>
+        </nav>
+
+        <div class="hero" aria-labelledby="hero__title">
+          <h1 class="subtitle text-center typewriter-container">
+            <time class="typewriter" datetime="2022-04-08">April 4, 2022</time>
+          </h1>
+          <h1 class="subtitle text-center typewriter-container">
+            <time class="typewriter" datetime="20:00">20:00</time>
+          </h1>
+          <h2 class="title text-center typewriter-fade" id="hero__title">What's on this day?</h2>
+          <a href="" class="scroll-btn"></a>
         </div>
       </div>
     </header>
 
-    <nav class="nav" id="nav">
-      <div class="container">
-        <ul class="nav__list flex-r" role="list">
-          <li class="nav__item hover-underline">Home</li>
-          <li class="nav__item hover-underline">Event list</li>
-          <li class="nav__item hover-underline">About</li>
-          <li class="nav__item hover-underline">Announcements</li>
-        </ul>
-      </div>
-    </nav>
-
-    <section class="hero pad-block-med" aria-labelledby="hero__title">
-      <div class="container">
-        <h1 class="subtitle text-center typewriter-container">
-          <time class="typewriter" datetime="2022-04-08">April 4, 2022</time>
-        </h1>
-        <h1 class="subtitle text-center typewriter-container">
-          <time class="typewriter" datetime="20:00">20:00</time>
-        </h1>
-        <h2 class="title text-center typewriter-fade" id="hero__title">What's on this day?</h2>
-        <a href="" class="scroll-btn"></a>
-      </div>
-    </section>
-
-    <section class="events pad-block-med" aria-labelledby="events__title">
-      <div class="container flow">
-        <h3 class="title" id="events__title">Events</h3>
-        <div class="events__list flow">
-          <div class="event flow">
-            <div class="event__image">
-              <img src="assets/placeholders/piano.png" alt="Event image" />
+    <main>
+      <section class="events pad-block-med" aria-labelledby="events__title">
+        <div class="container flow">
+          <h3 class="title" id="events__title">Events</h3>
+          <div class="events__list flow">
+            <div class="event flow">
+              <div class="event__image">
+                <img src="assets/placeholders/piano.png" alt="Event image" />
+              </div>
+              <div class="event__info flow">
+                <h4 class="event__title">Event title</h4>
+                <p class="event__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quisquam.
+                </p>
+                <a href="" class="event__link">Read more</a>
+              </div>
             </div>
-            <div class="event__info flow">
-              <h4 class="event__title">Event title</h4>
-              <p class="event__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quisquam.
-              </p>
-              <a href="" class="event__link">Read more</a>
-            </div>
-          </div>
-          <div class="event flow">
-            <div class="event__image">
-              <img src="assets/placeholders/piano with music sheet.png" alt="Event image" />
-            </div>
-            <div class="event__info flow">
-              <h4 class="event__title">Event title</h4>
-              <p class="event__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quisquam.
-              </p>
-              <a href="" class="event__link">Read more</a>
+            <div class="event flow">
+              <div class="event__image">
+                <img src="assets/placeholders/piano with music sheet.png" alt="Event image" />
+              </div>
+              <div class="event__info flow">
+                <h4 class="event__title">Event title</h4>
+                <p class="event__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quisquam.
+                </p>
+                <a href="" class="event__link">Read more</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <footer>
       <div class="container pad-block-med flex-r">
