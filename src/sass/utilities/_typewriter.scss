@@ -20,7 +20,7 @@
 }
 
 .typewriter::before {
-  background: var(--clr-neutral-100);
+  background: var(--clr-accent-400);
   animation: typewriter var(--typewriter-speed) steps(var(--typewriter-chars))
     var(--typewriter-delay) forwards;
 }
