@@ -110,7 +110,7 @@ $_btn-light: hsl(0 0% 90%);
       box-shadow $transition-duration $transition-timing-function $transition-delay;
   }
 
-  background: $bg;
+  background-color: $bg;
   color: $color;
   border: $border-thickness $border-style $border-color;
   border-radius: $border-rad;
@@ -118,7 +118,7 @@ $_btn-light: hsl(0 0% 90%);
   box-shadow: $box-shadow;
 
   &:hover {
-    background: $hover--bg;
+    background-color: $hover--bg;
     color: $hover--color;
     border: $hover--border-thickness $hover--border-style $hover--border-color;
     border-radius: $hover--border-rad;
@@ -127,7 +127,7 @@ $_btn-light: hsl(0 0% 90%);
   }
 
   &:focus {
-    background: $focus--bg;
+    background-color: $focus--bg;
     color: $focus--color;
     border: $focus--border-thickness $focus--border-style $focus--border-color;
     border-radius: $focus--border-rad;
@@ -136,7 +136,7 @@ $_btn-light: hsl(0 0% 90%);
   }
 
   &:active {
-    background: $active--bg;
+    background-color: $active--bg;
     color: $active--color;
     border: $active--border-thickness $active--border-style $active--border-color;
     border-radius: $active--border-rad;
@@ -145,7 +145,7 @@ $_btn-light: hsl(0 0% 90%);
   }
 
   &:disabled {
-    background: $disabled--bg;
+    background-color: $disabled--bg;
     color: $disabled--color;
     border: $disabled--border-thickness $disabled--border-style $disabled--border-color;
     border-radius: $disabled--border-rad;
