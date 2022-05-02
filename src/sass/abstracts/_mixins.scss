@@ -2,6 +2,7 @@
 @use 'sass:string';
 @use 'sass:color';
 @use '_breakpoints' as *;
+@use '_functions' as func;
 
 $_btn-dark: hsl(0 0% 25%);
 $_btn-light: hsl(0 0% 90%);
@@ -47,16 +48,16 @@ $_btn-light: hsl(0 0% 90%);
   $bg: $_btn-light,
   $color: $_btn-dark,
   $border-thickness: 2px,
-  $border-color: color.adjust($bg, $lightness: -5%),
+  $border-color: func.change-color-lightness($bg, 5%),
   $border-style: solid,
   $border-rad: 0,
   $padding: 0.5em 1em,
   $box-shadow: 0 0 0.5em $bg,
 
-  $hover--bg: color.adjust($color, $lightness: +5%),
-  $hover--color: color.adjust($bg, $lightness: -5%),
+  $hover--bg: func.change-color-lightness($color, 5%),
+  $hover--color: func.change-color-lightness($bg, 5%),
   $hover--border-thickness: $border-thickness,
-  $hover--border-color: color.adjust($bg, $lightness: -10%),
+  $hover--border-color: func.change-color-lightness($bg, 10%),
   $hover--border-style: $border-style,
   $hover--border-rad: $border-rad,
   $hover--padding: $padding,
