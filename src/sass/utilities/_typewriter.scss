@@ -1,7 +1,9 @@
 @use '../abstracts/' as abs;
 
+// Be careful when updating these custom properties.
+// You also need to update the corresponding values in the typewriter-fade class.
 .typewriter-container {
-  --typewriter-speed: 4s;
+  --typewriter-speed: 3s;
   --typewriter-chars: 0;
   --typewriter-delay: 1s;
   --typewriter-blink: 750ms;
@@ -33,10 +35,11 @@
     blink var(--typewriter-blink) steps(var(--typewriter-chars)) infinite;
 }
 
+// The value of the animation-delay is based on the custom properties of the typewriter-container class.
 .typewriter-fade {
   opacity: 0;
-  transform: translateY(3rem);
-  animation: fade-in-up 2s ease calc(var(--typewriter-speed) + var(--typewriter-delay)) forwards;
+  transform: translateY(3em);
+  animation: fade-in-up 2000ms ease calc(calc(3 + 1) * 1s) forwards;
 }
 
 @keyframes typewriter {
