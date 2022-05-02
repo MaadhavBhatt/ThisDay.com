@@ -51,6 +51,7 @@ $_btn-light: hsl(0 0% 90%);
   $border-style: solid,
   $border-rad: 0,
   $padding: 0.5em 1em,
+  $box-shadow: 0 0 0.5em $bg,
 
   $hover--bg: color.adjust($color, $lightness: +5%),
   $hover--color: color.adjust($bg, $lightness: -5%),
@@ -59,6 +60,7 @@ $_btn-light: hsl(0 0% 90%);
   $hover--border-style: $border-style,
   $hover--border-rad: $border-rad,
   $hover--padding: $padding,
+  $hover--box-shadow: 0 0 0.5em $hover--bg,
 
   $focus--bg: $hover--bg,
   $focus--color: $hover--color,
@@ -67,6 +69,7 @@ $_btn-light: hsl(0 0% 90%);
   $focus--border-style: $hover--border-style,
   $focus--border-rad: $hover--border-rad,
   $focus--padding: $hover--padding,
+  $focus--box-shadow: 0 0 0.5em $focus--bg,
 
   $active--bg: $hover--bg,
   $active--color: $hover--color,
@@ -75,6 +78,7 @@ $_btn-light: hsl(0 0% 90%);
   $active--border-style: $hover--border-style,
   $active--border-rad: $hover--border-rad,
   $active--padding: $hover--padding,
+  $active--box-shadow: 0 0 0.5em $active--bg,
 
   $disabled--bg: $bg,
   $disabled--color: $color,
@@ -83,6 +87,7 @@ $_btn-light: hsl(0 0% 90%);
   $disabled--border-style: $border-style,
   $disabled--border-rad: $border-rad,
   $disabled--padding: $padding,
+  $disabled--box-shadow: 0 0 0.5em $disabled--bg,
 
   $transition: true,
   $transition-duration: 0.2s,
@@ -100,7 +105,8 @@ $_btn-light: hsl(0 0% 90%);
       border-width $transition-duration $transition-timing-function $transition-delay,
       border-style $transition-duration $transition-timing-function $transition-delay,
       border-radius $transition-duration $transition-timing-function $transition-delay,
-      padding $transition-duration $transition-timing-function $transition-delay;
+      padding $transition-duration $transition-timing-function $transition-delay,
+      box-shadow $transition-duration $transition-timing-function $transition-delay;
   }
 
   background: $bg;
@@ -108,6 +114,7 @@ $_btn-light: hsl(0 0% 90%);
   border: $border-thickness $border-style $border-color;
   border-radius: $border-rad;
   padding: $padding;
+  box-shadow: $box-shadow;
 
   &:hover {
     background: $hover--bg;
@@ -115,6 +122,7 @@ $_btn-light: hsl(0 0% 90%);
     border: $hover--border-thickness $hover--border-style $hover--border-color;
     border-radius: $hover--border-rad;
     padding: $hover--padding;
+    box-shadow: $hover--box-shadow;
   }
 
   &:focus {
@@ -123,6 +131,7 @@ $_btn-light: hsl(0 0% 90%);
     border: $focus--border-thickness $focus--border-style $focus--border-color;
     border-radius: $focus--border-rad;
     padding: $focus--padding;
+    box-shadow: $focus--box-shadow;
   }
 
   &:active {
@@ -131,6 +140,7 @@ $_btn-light: hsl(0 0% 90%);
     border: $active--border-thickness $active--border-style $active--border-color;
     border-radius: $active--border-rad;
     padding: $active--padding;
+    box-shadow: $active--box-shadow;
   }
 
   &:disabled {
@@ -139,5 +149,6 @@ $_btn-light: hsl(0 0% 90%);
     border: $disabled--border-thickness $disabled--border-style $disabled--border-color;
     border-radius: $disabled--border-rad;
     padding: $disabled--padding;
+    box-shadow: $disabled--box-shadow;
   }
 }
