@@ -8,7 +8,7 @@
       height: 4px;
 
       border-radius: 0 50% 50% 0;
-      background-color: var(--clr-accent-500);
+      background: linear-gradient(to right, var(--clr-accent-500), var(--clr-accent-600));
       transition: width 250ms ease-in-out;
     }
 
@@ -24,7 +24,7 @@
     height: 4px;
 
     border-radius: 0 50% 50% 0;
-    background-color: var(--clr-accent-500);
+    background: linear-gradient(to right, var(--clr-accent-500), var(--clr-accent-600));
     transition: width 250ms ease-in-out;
   }
 }
