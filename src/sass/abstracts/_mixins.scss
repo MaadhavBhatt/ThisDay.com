@@ -57,7 +57,7 @@ $_btn-light: hsl(0 0% 90%);
   $hover--bg: func.change-color-lightness($color, 5%),
   $hover--color: func.change-color-lightness($bg, 5%),
   $hover--border-thickness: $border-thickness,
-  $hover--border-color: func.change-color-lightness($bg, 10%),
+  $hover--border-color: $hover--bg,
   $hover--border-style: $border-style,
   $hover--border-rad: $border-rad,
   $hover--padding: $padding,
