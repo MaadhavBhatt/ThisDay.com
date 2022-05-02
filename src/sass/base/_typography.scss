@@ -62,3 +62,8 @@ time {
   color: var(--clr-accent-600);
   font-family: $monospace;
 }
+
+.title {
+  font-family: $display;
+  letter-spacing: $tracking-high;
+}

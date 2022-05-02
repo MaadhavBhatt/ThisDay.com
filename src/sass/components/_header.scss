@@ -3,4 +3,8 @@ header {
   text-align: center;
   color: var(--clr-neutral-900);
   background-color: var(--clr-accent-400);
+
+  & .title {
+    margin-top: 0.5em;
+  }
 }
