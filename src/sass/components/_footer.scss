@@ -9,18 +9,22 @@ footer {
     flex-grow: 1;
   }
 
-  & li {
-    padding: 0.5em;
+  & .sitemap {
+    & li {
+      margin-inline-start: auto;
+      padding: 0.5em;
+      width: fit-content;
 
-    font-size: 1.2rem;
-    text-align: end;
-    line-height: map.get(abs.$leading, 'low');
+      font-size: 1.2rem;
+      text-align: end;
+      line-height: map.get(abs.$leading, 'low');
 
-    cursor: pointer;
-  }
+      cursor: pointer;
+    }
 
-  & li:hover,
-  & li:focus {
-    opacity: 0.75;
+    & li:hover,
+    & li:focus {
+      opacity: 0.75;
+    }
   }
 }
