@@ -9,6 +9,17 @@ footer {
     flex-grow: 1;
   }
 
+  & .website-related {
+    & .footer__title {
+      width: fit-content;
+      font-size: map.get(abs.$sizes, heading);
+    }
+
+    & .footer__subtitle {
+      font-size: map.get(abs.$sizes, text);
+    }
+  }
+
   & .sitemap {
     & li {
       margin-inline-start: auto;
